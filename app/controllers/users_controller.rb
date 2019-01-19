@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   
   def list
     if logged_in?
-        @users_five = User.find([1,2,3,4,5])
+        @users_five = User.find([1,2])
     else
         redirect_to login_path
     end

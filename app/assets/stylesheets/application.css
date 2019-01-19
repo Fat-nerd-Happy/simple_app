@@ -63,6 +63,18 @@ a.button_sign {
     left: 45%;
 }
 
+a.button_edit {
+	text-decoration:none;
+	position: relative;
+	color: white;
+	padding: 10px 15px 10px 15px;
+	font-size: 15px;
+	border-radius: 8px;
+    text-align:center;
+    background-color: #FF6633;
+    bottom: 20px;
+}
+
 a.tool_bar {
 	text-decoration:none;
 	display:block;
@@ -173,10 +185,11 @@ input.file {
 }
 
 div.list {
-	position: relative;
-	width: 100%;
-	margin-left: 80px;
-	margin-bottom: 40px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 90px;
+	text-align: center
 }
 
 img.top {
@@ -216,4 +229,10 @@ h1.logo {
 	width: 50%;
 	height: 30px;
 	font-size:20px;
+}
+
+h1.show_title {
+	color: pink;
+	position: absolute;
+	margin-top: 30px;
 }
