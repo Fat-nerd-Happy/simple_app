@@ -1,47 +1,11 @@
-<% provide(:title, "User list") %>
+<% provide(:title, "推荐用户") %>
+
 <div class = "show_list">
-    <div class="list">
-        <h1>test1</h1>
-        <%= image_tag("test1_user.jpg", class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test2</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test3</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test4</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test5</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test6</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test7</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test8</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
-    
-    <div class="list">
-        <h1>test9</h1>
-        <%= image_tag("test1_user.jpg",  class: "list") %>
-    </div>
+    <% for i in 0..4 do %>
+        <div class="list">
+            <h1><%= @users_five[i].name %></h1>
+            <%= image_tag("test1_user.jpg", class: "list") %>
+        </div>
+    <% end %>
 </div>
+ 

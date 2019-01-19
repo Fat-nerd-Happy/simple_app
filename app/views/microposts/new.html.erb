@@ -1,26 +1,33 @@
-<% provide(:title, "fill your profile") %>
-<h2 class="sign">Profile</h2>
+<% provide(:title, "请完善你的信息") %>
+<h2 class="sign">完善个人信息</h2>
 <div class = "Sign_Up">
     <%= form_for(@micropost,url: new_micropost_path) do |f| %>
-         <b><%= f.label :name %></b></br>
+         <b><%= f.label "姓名" %></b></br>
          <%= f.text_field :name, class:"sign_up" %></br>
 
-         <b><%= f.label :age %></b></br>
+         <b><%= f.label "芳龄" %></b></br>
          <%= f.text_field :age , class:"sign_up"%></br>
 
-         <b><%= f.label :gender %></b></br>
-         <%= f.text_field :gender ,class:"sign_up" %></br>
+         <b><%= f.label "性别" %></b></br>
+         </br>
+         <%= f.label "男" %>
+         <%= f.radio_button :gender , "男" %>
+         <%= f.label "女" %>
+         <%= f.radio_button :gender , "女" %></br>
+         </br>
 
-         <b><%= f.label :institute, "institute" %></b></br>
-         <%= f.text_field :institute ,class:"sign_up" %></br>
-         
-         <b><%= f.label :content, "content" %></b></br>
-         <%= f.text_field :content ,class:"content" %></br>
+         <b><%= f.label :institute, "所在研究所" %></b></br>
+         </br>
+         <%= f.select :institute, options_for_select([ ['新疆理化所',0], ['计算技术所', 1], ['软件所', 2], ['网络中心', 3] ]) ,class:"selected" %>
+         </br>
+         </br>
+         <b><%= f.label :content, "交友宣言" %></b></br>
+         <%= f.text_area :content ,class:"content" %></br>
          <span>
          <input type="text" name="fileShowName" id="fileShowName" readonly="readonly" class="file_name" />	
-         <input type="button" id="fileButton" name="fileButton" value="browse" onclick="upload()" class="file"/>
+         <input type="button" id="fileButton" name="fileButton" value="浏览" onclick="upload()" class="file"/>
          </span>
          <%= f.file_field :picture, style: "display: none;" , onchange: "show_value()"%>
-         <%= f.submit "Upload my profile", class: "submit" %></br>
+         <%= f.submit "提交我的信息", class: "submit" %></br>
     <% end %>
 </div>

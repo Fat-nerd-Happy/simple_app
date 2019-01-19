@@ -3,11 +3,11 @@
     <h2 class="name">
         <%= @micropost.name %>
     </h2>
-    <%= gravatar_for @user %>
-    <p class = "info"><b>name:</b><%= @micropost.name %></p>
-    <p class = "info"><b>age:</b><%= @micropost.age %></p>
-    <p class = "info"><b>Gender:</b><%= @micropost.gender %></p>
-    <p class = "info"><b>Institute:</b><%= @micropost.institute %></p>
-    <p class = "info"><b>minipost:</b></p>
+    <%= image_tag @micropost.picture.url if @micropost.picture? %>
+    <p class = "info"><b>姓名:</b><%= @micropost.name %></p>
+    <p class = "info"><b>年龄:</b><%= @micropost.age %></p>
+    <p class = "info"><b>性别:</b><%= @micropost.gender %></p>
+    <p class = "info"><b>研究所:</b><%= @micropost.institute %></p>
+    <p class = "info"><b>签名:</b></p>
     <p class = "info"><%= @micropost.content %></p>
 </div>

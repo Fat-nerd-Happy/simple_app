@@ -5,9 +5,14 @@ class MicropostsController < ApplicationController
   end
 
   def create
-    @micropost = current_user.micropost.build(micropost_params)
+    if current_user.nil?
+      redirect_to new_micropost_path
+    end
+    
+    @micropost = Micropost.new(micropost_params)
+    current_user.micropost = @micropost
     if @micropost.save
-      redirect_to root_url
+      redirect_to current_user
     else
       render 'static_pages/home'
     end

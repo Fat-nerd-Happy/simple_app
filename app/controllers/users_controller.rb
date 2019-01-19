@@ -13,13 +13,18 @@ class UsersController < ApplicationController
     @user = User.new(user_params)    
     if @user.save
       log_in @user
-      redirect_to @user
+      redirect_to new_micropost_path
     else
       render 'new'
     end
   end
   
   def list
+    if logged_in?
+        @users_five = User.find([1,2,3,4,5])
+    else
+        redirect_to login_path
+    end
   end
   
   private
