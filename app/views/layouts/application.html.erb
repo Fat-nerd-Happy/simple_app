@@ -11,14 +11,14 @@
   <body class = "home">
     <%= yield %>
     <div class="top" >
-      <%= image_tag("logo.jpg", class: "top") %>
+      <h1 class = "logo">三&nbsp;生&nbsp;缘</h1>
       <% if logged_in? %>
-        <%= link_to "Profile", current_user, class: "tool_bar" %>
-        <%= link_to "Logout", logout_path, method: :delete ,class: "tool_bar"%>
+        <%= link_to "个人信息", current_user, class: "tool_bar" %>
+        <%= link_to " 注销  ", logout_path, method: :delete ,class: "tool_bar"%>
       <% else %>  
-        <%= link_to "Login", login_path, class: "tool_bar" %>
+        <%= link_to " 登陆  ", login_path, class: "tool_bar" %>
       <% end %>
-      <%= link_to "Show ", list_path, class: "tool_bar" %>
+      <%= link_to " 缘起  ", list_path, class: "tool_bar" %>
     </div>
   </body>
 </html>

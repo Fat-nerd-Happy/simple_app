@@ -11,4 +11,5 @@
     <p class = "info"><b>邮箱:</b><%= @user.email %></p>
     <p class = "info"><b>签名:</b></p>
     <p class = "info"><%= @micropost.content %></p>
+    <%= link_to "修改我的信息!", edit_micropost_path, class: "button_sign" %>
 </div>

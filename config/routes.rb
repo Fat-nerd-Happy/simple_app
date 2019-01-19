@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  get 'users/edit'
+
   get 'sessions/new'
   
+  get '/edit_micropost', to: 'microposts#edit'
+  patch '/edit_micropost', to: 'microposts#update'
   get '/new_micropost', to: 'microposts#new'
   get '/list', to: 'users#list'
   post '/new_micropost', to: 'microposts#create'

@@ -18,6 +18,30 @@ class MicropostsController < ApplicationController
     end
   end
 
+  def edit
+    @micropost = Micropost.new
+    
+    if current_user.nil?
+      redirect_to new_micropost_path
+    end
+    
+    @micropost = current_user.micropost
+    
+  end
+  
+  def update
+  
+    @micropost = current_user.micropost
+    if  @micropost.update_attributes(micropost_params)
+      current_user.micropost = @micropost
+      redirect_to current_user
+      
+    else
+      redirect_to root_path
+    end
+    
+  end
+
   def destroy
   end
 

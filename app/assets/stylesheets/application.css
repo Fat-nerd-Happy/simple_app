@@ -201,10 +201,19 @@ p.info {
 	font-size: 20px;
 }
 
-select.selected {
+h1.logo {
+	margin-top: 0px;
+	float: left;
+	font-size: 30px;
+	color: white;
+}
+
+#micropost_institute {
 	appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     -ms-appearance: none;
-	width: 100px;
+	width: 50%;
+	height: 30px;
+	font-size:20px;
 }

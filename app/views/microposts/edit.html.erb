@@ -1,7 +1,7 @@
-<% provide(:title, "请完善你的信息") %>
-<h2 class="sign">完善个人信息</h2>
+<% provide(:title, "请修改你的信息") %>
+<h2 class="sign">修改个人信息</h2>
 <div class = "Sign_Up">
-    <%= form_for(@micropost,url: new_micropost_path) do |f| %>
+    <%= form_for(@micropost,url: edit_micropost_path) do |f| %>
          <b><%= f.label "姓名" %></b></br>
          <%= f.text_field :name, class:"sign_up" %></br>
 
