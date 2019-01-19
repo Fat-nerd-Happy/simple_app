@@ -4,7 +4,7 @@
     <% for i in 0..4 do %>
         <div class="list">
             <h1><%= @users_five[i].name %></h1>
-            <%= image_tag("test1_user.jpg", class: "list") %>
+            <%= image_tag(@users_five[i].micropost.picture.url, class: "list") %>
         </div>
     <% end %>
 </div>
