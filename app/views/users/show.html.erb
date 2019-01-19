@@ -1,0 +1,13 @@
+<% provide(:title, @user.name) %>
+<div class="info">
+    <h2 class="name">
+        <%= @micropost.name %>
+    </h2>
+    <%= gravatar_for @user %>
+    <p class = "info"><b>name:</b><%= @micropost.name %></p>
+    <p class = "info"><b>age:</b><%= @micropost.age %></p>
+    <p class = "info"><b>Gender:</b><%= @micropost.gender %></p>
+    <p class = "info"><b>Institute:</b><%= @micropost.institute %></p>
+    <p class = "info"><b>minipost:</b></p>
+    <p class = "info"><%= @micropost.content %></p>
+</div>

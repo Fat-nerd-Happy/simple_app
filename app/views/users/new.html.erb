@@ -1,0 +1,19 @@
+<% provide(:title, "Sign Up") %>
+<h2 class="sign">Sign Up</h2>
+<div class = "Sign_Up">
+    <%= form_for(@user, url: signup_path) do |f| %>
+         <b><%= f.label :name %></b></br>
+         <%= f.text_field :name, class:"sign_up" %></br>
+
+         <b><%= f.label :email %></b></br>
+         <%= f.email_field :email , class:"sign_up"%></br>
+
+         <b><%= f.label :password %></b></br>
+         <%= f.password_field :password ,class:"sign_up" %></br>
+
+         <b><%= f.label :password_confirmation, "Confirmation" %></b></br>
+         <%= f.password_field :password_confirmation ,class:"sign_up" %></br>
+
+         <%= f.submit "Create my account", class: "submit" %>
+    <% end %>
+</div>
