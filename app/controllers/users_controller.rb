@@ -24,7 +24,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)    
     if @user.save
       log_in @user
-      #@users_five = @user.micropost.where(institute: @user.micropost.institute)
       redirect_to new_micropost_path
     else
       render 'new'
@@ -32,8 +31,6 @@ class UsersController < ApplicationController
   end
   
   def list
-    #@user = User.all
-   # @users_five = @current_user
    @users_five = Array.new
     if logged_in?
         users_five1 = User.all
@@ -42,9 +39,6 @@ class UsersController < ApplicationController
              @users_five.push(user)
           end
         end
-       #@users_five = User.all
-       #@users_five = User.where()
-       #@users_five = @user.micropost.where(institute: @user.micropost.institute)
     else
         redirect_to login_path
     end
