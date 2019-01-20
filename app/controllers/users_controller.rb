@@ -17,6 +17,12 @@ class UsersController < ApplicationController
         @micropost.institute = "软件所"
       when  "3"
         @micropost.institute = "网络中心"
+      when  "4"
+        @micropost.institute = "新疆天文台"
+      when  "5"
+        @micropost.institute = "新疆生态与地理研究所"
+      when  "6"
+        @micropost.institute = "西双版纳热带植物园"
     end
   end
   
