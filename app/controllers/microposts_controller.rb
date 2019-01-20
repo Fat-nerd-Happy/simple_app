@@ -35,6 +35,7 @@ class MicropostsController < ApplicationController
     if  @micropost.update_attributes(micropost_params)
       current_user.micropost = @micropost
       redirect_to current_user
+      #@users_five = Micropost.where(name: '冯笑').order(created_at: :desc)
       
     else
       redirect_to root_path
