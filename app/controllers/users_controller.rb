@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @micropost = @user.micropost
+
     institute = @micropost.institute
     case institute
       when  "0"
@@ -23,6 +24,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)    
     if @user.save
       log_in @user
+      #@users_five = @user.micropost.where(institute: @user.micropost.institute)
       redirect_to new_micropost_path
     else
       render 'new'
@@ -30,8 +32,19 @@ class UsersController < ApplicationController
   end
   
   def list
+    #@user = User.all
+   # @users_five = @current_user
+   @users_five = Array.new
     if logged_in?
-        @users_five = User.find([1,2,3,4,5])
+        users_five1 = User.all
+        users_five1.each do |user|
+          if user.micropost.gender != current_user.micropost.gender
+             @users_five.push(user)
+          end
+        end
+       #@users_five = User.all
+       #@users_five = User.where()
+       #@users_five = @user.micropost.where(institute: @user.micropost.institute)
     else
         redirect_to login_path
     end

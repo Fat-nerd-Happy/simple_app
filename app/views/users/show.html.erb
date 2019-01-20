@@ -13,5 +13,7 @@
     <p class = "info"><%= @micropost.content %></p>
     </br>
     </br>
-    <%= link_to "修改我的信息!", edit_micropost_path, class: "button_edit" %>
+    <% if current_user.micropost == @micropost  %>
+       <%= link_to "修改我的信息!", edit_micropost_path, class: "button_edit" %>
+    <% end %>
 </div>
