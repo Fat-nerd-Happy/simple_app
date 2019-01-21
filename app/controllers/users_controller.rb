@@ -10,11 +10,11 @@ class UsersController < ApplicationController
     institute = @micropost.institute
     case institute
       when  "0"
-        @micropost.institute = "新疆理化所"
+        @micropost.institute = "新疆理化技术研究所"
       when  "1"
-        @micropost.institute = "计算技术所"
+        @micropost.institute = "计算技术研究所"
       when  "2"
-        @micropost.institute = "软件所"
+        @micropost.institute = "软件研究所"
       when  "3"
         @micropost.institute = "网络中心"
       when  "4"
