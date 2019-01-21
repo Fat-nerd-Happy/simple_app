@@ -1,24 +1,20 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+本网站原名为“国科大鹊桥网”，后来经过商讨决定改为了“缘来有你”。
+本网站设计初衷在于给在校研究生们一个交友平台，通过此平台解决自己的终身大事。
+本网站的主要流程如下：
+1：首先需要注册账号，注册时需要填写信息，如：姓名、邮箱账号、研究所、交友宣言等
+2：注册登录之后，系统便会向用户推荐异性用户，会直接显示异性用户的照片以及名字，
+如果您对某个异性用户感兴趣，便可点击查看用户详细信息，同过用户注册时时所填写的
+E-mail，您可以选择通过此E-mail与其联系，然后顺利牵手。
+小组成员：
+组长：郭世伟 
+      github：Fat-nerd-Happy
+组员：
+      陈玺
+      github：hischen
+      李灿
+      github:lidoudou19970927
+      史占堂
+      github:shizhantang
+      冯笑
+      github:Fengxiaoxx
