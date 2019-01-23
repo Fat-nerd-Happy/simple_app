@@ -4,7 +4,11 @@
     <% for i in 0...@users_five.length do %> 
         <div class="list">
             <h1><%= @users_five[i].name %></h1>
-            <%= image_tag(@users_five[i].micropost.picture.url, class: "list") %>
+            <% if @users_five[i].micropost.picture.url != nil %>
+                <%= image_tag(@users_five[i].micropost.picture.url, class: "list") %>
+            <% else %>
+                <%= image_tag("test_user.jpg", class: "list") %>
+            <% end %>
             </br>
             <%= link_to "点我立即查看详情!", @users_five[i] %>
         </div>
